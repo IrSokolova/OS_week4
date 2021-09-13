@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -14,7 +13,7 @@ int main(){
 	pid_t PID;
 	while(1){
 	printf("Enter command\n");
-	fgets(command, 100, stdin);
+	scanf("%[^\n]%*c", &command);
 	token = strtok(command, " \n");
 	while (token!=NULL){
 		arg[i]=token;
